@@ -1,8 +1,8 @@
-from create_table_query import create_db
-from select_query import find_client
-from insert_query import add_client, add_phone
-from delete_query import delete_client, delete_phone
-from update_query import change_client
+from db_queries.create_table_query import create_db
+from db_queries.select_query import find_client
+from db_queries.insert_query import add_client, add_phone
+from db_queries.delete_query import delete_client, delete_phone
+from db_queries.update_query import change_client
 import configparser
 import psycopg2
 
