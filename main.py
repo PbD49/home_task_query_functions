@@ -22,12 +22,12 @@ if __name__ == '__main__':
     add_client(cursor, "Ньют", "Саламандр", "ivan@example.com", [123456789, 987654321])
     add_client(cursor, "Петр", "Петров", "petr@example.com", [111222333])
 
-    add_phone(cursor, 23, 999888777)
+    add_phone(cursor, 40, 999888777)
 
-    change_client(cursor, 23, first_name="Ньют")
+    change_client(cursor, 40, first_name="Ньют")
 
-    delete_phone(cursor, 23, 987654321)
-    delete_client(cursor, 6)
+    delete_phone(cursor, 40, 987654321)
+    delete_client(cursor, 4)
 
     print(find_client(cursor, first_name="Ньют", last_name=None, email=None, phone=None))
 

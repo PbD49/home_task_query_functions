@@ -1,3 +1,7 @@
+from logger import timer
+
+
+@timer
 def change_client(cur, client_id, first_name=None, last_name=None, email=None, phones=None):
     if first_name:
         cur.execute("UPDATE clients SET first_name = %s WHERE id = %s", (first_name, client_id))

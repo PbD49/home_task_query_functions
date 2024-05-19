@@ -1,3 +1,7 @@
+from logger import timer
+
+
+@timer
 def find_client(cur, first_name=None, last_name=None, email=None, phone=None):
     if first_name and last_name:
         cur.execute("SELECT c.id, c.first_name, c.last_name, ci.email, ci.phone_number "

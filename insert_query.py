@@ -1,3 +1,7 @@
+from logger import timer
+
+
+@timer
 def add_client(cur, first_name, last_name, email, phones):
     cur.execute('''
         INSERT INTO clients (first_name, last_name) 
@@ -13,6 +17,7 @@ def add_client(cur, first_name, last_name, email, phones):
         ''', (client_id, email, phone))
 
 
+@timer
 def add_phone(cur, client_id, phone):
     cur.execute('''
                 INSERT INTO contact_info (phone_number, client_id)
